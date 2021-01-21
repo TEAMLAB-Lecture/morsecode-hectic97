@@ -278,7 +278,8 @@ def encoding_sentence(english_sentence):
     """
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
-    clean_en_sentence = get_cleaned_english_sentence(english_sentence.upper()).replace(' ',' ! ')
+    clean_en_sentence = get_cleaned_english_sentence(english_sentence.upper())
+    clean_en_sentence = ' '.join(clean_en_sentence.split()).replace(' ',' ! ')
     result = ''
     for w in clean_en_sentence.split():
         for c in w:
